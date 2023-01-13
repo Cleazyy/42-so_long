@@ -6,7 +6,7 @@
 #    By: fluchten <fluchten@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/03 09:46:50 by fluchten          #+#    #+#              #
-#    Updated: 2023/01/13 14:40:19 by fluchten         ###   ########.fr        #
+#    Updated: 2023/01/13 16:23:17 by fluchten         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -32,8 +32,6 @@ SRCS = args.c \
 		utils.c
 OBJS = $(addprefix $(OBJS_DIR)/, $(SRCS:%.c=%.o))
 
-MLX = -I /usr/local/include -L /usr/local/lib/ -lmlx -framework OpenGL -framework AppKit
-
 FT_PRINTF_PATH = libs/ft_printf
 FT_PRINTF_LIB = ${FT_PRINTF_PATH}/libftprintf.a
 FT_PRINTF_INC = ${FT_PRINTF_PATH}/includes
@@ -42,20 +40,28 @@ GNL_PATH = libs/get_next_line
 GNL_LIB = ${GNL_PATH}/libftgnl.a
 GNL_INC = ${GNL_PATH}/includes
 
+# MLX = -I /usr/local/include -L /usr/local/lib/ -lmlx -framework OpenGL -framework AppKit
+MLX_PATH = libs/mlx
+MLX_LIB	= ${MLX_PATH}/libmlx.a ${MLX_FLAGS}
+MLX_INC = ${MLX_PATH}/
+MLX_FLAGS = -framework OpenGL -framework AppKit
+
 all: $(NAME)
 
 $(OBJS_DIR)/%.o: ${SRCS_DIR}/%.c
 	@mkdir -p ${OBJS_DIR}
-	${CC} ${CFLAGS} -I ${INC_DIR} -I ${FT_PRINTF_INC} -I ${GNL_INC} -c $< -o $@
+	${CC} ${CFLAGS} -I ${INC_DIR} -I ${FT_PRINTF_INC} -I ${GNL_INC} -I ${MLX_INC} -c $< -o $@
 
 $(NAME): $(OBJS)
 	@make -C ${FT_PRINTF_PATH}
 	@make -C ${GNL_PATH}
-	$(CC) $(CFLAGS) $(OBJS) ${FT_PRINTF_LIB} ${GNL_LIB} $(MLX) -o $(NAME)
+	@make -C ${MLX_PATH}
+	$(CC) $(CFLAGS) $(OBJS) ${FT_PRINTF_LIB} ${GNL_LIB} $(MLX_LIB) -o $(NAME)
 
 clean:
 	@make clean -C ${FT_PRINTF_PATH}
 	@make clean -C ${GNL_PATH}
+	@make clean -C ${MLX_PATH}
 	${RM} ${OBJS_DIR}
 
 fclean:	clean
