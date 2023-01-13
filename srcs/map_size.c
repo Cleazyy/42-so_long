@@ -6,7 +6,7 @@
 /*   By: fluchten <fluchten@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/10 10:50:31 by fluchten          #+#    #+#             */
-/*   Updated: 2023/01/13 09:39:30 by fluchten         ###   ########.fr       */
+/*   Updated: 2023/01/13 14:12:04 by fluchten         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ int	get_map_height(char **map)
 {
 	int	size;
 
-	size = get_map_size(map) * ASSETS_SIZE;
+	size = get_map_size(map) * 32;
 	return (size);
 }
 
@@ -34,6 +34,6 @@ int	get_map_width(char **map)
 {
 	int	size;
 
-	size = ft_strlen(map[0]) * ASSETS_SIZE;
+	size = ft_strlen(map[0]) * 32;
 	return (size);
 }

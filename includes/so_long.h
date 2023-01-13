@@ -6,7 +6,7 @@
 /*   By: fluchten <fluchten@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/13 14:07:33 by fluchten          #+#    #+#             */
-/*   Updated: 2023/01/13 14:07:35 by fluchten         ###   ########.fr       */
+/*   Updated: 2023/01/13 14:12:09 by fluchten         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,6 @@
 # define PLAYER_DOWN_PATH "./assets/player_down.xpm"
 # define PLAYER_LEFT_PATH "./assets/player_left.xpm"
 # define PLAYER_RIGHT_PATH "./assets/player_right.xpm"
-# define ASSETS_SIZE 32
 
 typedef struct s_material {
 	void	*floor;
@@ -54,12 +53,6 @@ typedef struct s_mlx {
 	t_material	img;
 	t_character	player;
 }				t_mlx;
-
-typedef struct s_mapdata {
-	int	nbexit;
-	int	nbitem;
-	int	nbstart;
-}				t_mapdata;
 
 /* args */
 int		check_args(int ac, char **av);
