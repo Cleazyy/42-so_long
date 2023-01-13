@@ -6,11 +6,31 @@
 /*   By: fluchten <fluchten@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/06 11:48:47 by fluchten          #+#    #+#             */
-/*   Updated: 2023/01/13 14:14:15 by fluchten         ###   ########.fr       */
+/*   Updated: 2023/01/13 14:35:59 by fluchten         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "so_long.h"
+
+static void	open_exit(t_mlx *mlx)
+{
+	int	x;
+	int	y;
+
+	y = 0;
+	while (mlx->map[y])
+	{
+		x = 0;
+		while (mlx->map[y][x])
+		{
+			if (mlx->map[y][x] == 'E')
+				mlx_put_image_to_window(mlx->mlx_ptr, mlx->win_ptr,
+					mlx->img.exit_open, x * 32, y * 32);
+			x++;
+		}
+		y++;
+	}
+}
 
 static void	move_to_new_pos(t_mlx *mlx, int new_posx, int new_posy)
 {
@@ -43,6 +63,8 @@ static void	check_next_pos(t_mlx *mlx, int new_posx, int new_posy)
 		if (mlx->map[new_posy][new_posx] == 'C')
 		{
 			mlx->player.items--;
+			if (mlx->player.items == 0)
+				open_exit(mlx);
 			mlx->map[new_posy][new_posx] = '0';
 		}
 		else if (mlx->map[new_posy][new_posx] == 'E')

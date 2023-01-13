@@ -6,7 +6,7 @@
 /*   By: fluchten <fluchten@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/03 09:46:50 by fluchten          #+#    #+#             */
-/*   Updated: 2023/01/13 14:14:50 by fluchten         ###   ########.fr       */
+/*   Updated: 2023/01/13 14:35:16 by fluchten         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@
 # define FLOOR_PATH "./assets/floor.xpm"
 # define ITEM_PATH "./assets/key.xpm"
 # define EXIT_PATH "./assets/trapdoor_closed.xpm"
+# define EXIT_OPEN_PATH "./assets/trapdoor_opened.xpm"
 # define PLAYER_UP_PATH "./assets/player_up.xpm"
 # define PLAYER_DOWN_PATH "./assets/player_down.xpm"
 # define PLAYER_LEFT_PATH "./assets/player_left.xpm"
@@ -34,6 +35,7 @@ typedef struct s_material {
 	void	*wall;
 	void	*collectible;
 	void	*exit;
+	void	*exit_open;
 	void	*player;
 }			t_material;
 
