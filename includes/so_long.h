@@ -6,7 +6,7 @@
 /*   By: fluchten <fluchten@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/03 09:46:50 by fluchten          #+#    #+#             */
-/*   Updated: 2023/01/13 14:35:16 by fluchten         ###   ########.fr       */
+/*   Updated: 2023/01/13 14:40:06 by fluchten         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,27 +39,25 @@ typedef struct s_material {
 	void	*player;
 }			t_material;
 
-typedef struct s_character {
+typedef struct s_player {
 	int		posx;
 	int		posy;
 	int		width;
 	int		height;
 	int		moves;
 	int		items;
-}				t_character;
+}				t_player;
 
 typedef struct s_mlx {
 	void		*mlx_ptr;
 	void		*win_ptr;
 	char		**map;
 	t_material	img;
-	t_character	player;
+	t_player	player;
 }				t_mlx;
 
 /* args */
 int		check_args(int ac, char **av);
-/* character */
-void	move_player(int keycode, t_mlx *mlx);
 /* game */
 int		closewindow(t_mlx *mlx);
 int		key_pressed(int key, t_mlx *mlx);
@@ -70,6 +68,8 @@ char	**parse_map(char *file);
 int		get_map_size(char **map);
 int		get_map_height(char **map);
 int		get_map_width(char **map);
+/* player */
+void	move_player(int keycode, t_mlx *mlx);
 /* sprites */
 void	init_sprites(t_mlx *mlx);
 void	set_wall(t_mlx *mlx, int x, int y);

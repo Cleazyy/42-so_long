@@ -6,7 +6,7 @@
 #    By: fluchten <fluchten@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/03 09:46:50 by fluchten          #+#    #+#              #
-#    Updated: 2023/01/13 14:04:43 by fluchten         ###   ########.fr        #
+#    Updated: 2023/01/13 14:40:19 by fluchten         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,12 +21,12 @@ SRCS_DIR = srcs
 OBJS_DIR = objs
 
 SRCS = args.c \
-		character.c \
 		game_hook.c \
 		main.c \
 		map_init.c \
 		map_parsing.c \
 		map_size.c \
+		player.c \
 		sprites_init.c \
 		sprites_set.c \
 		utils.c
