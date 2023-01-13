@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   character.c                                        :+:      :+:    :+:   */
+/*   player.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fluchten <fluchten@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/06 11:48:47 by fluchten          #+#    #+#             */
-/*   Updated: 2023/01/13 14:35:59 by fluchten         ###   ########.fr       */
+/*   Updated: 2023/01/13 17:10:46 by fluchten         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,8 +37,8 @@ static void	move_to_new_pos(t_mlx *mlx, int new_posx, int new_posy)
 	int		posx;
 	int		posy;
 
-	posx = mlx->player.posx;
-	posy = mlx->player.posy;
+	posx = mlx->player.x;
+	posy = mlx->player.y;
 	if (mlx->map[posy][posx] == '0' || mlx->map[posy][posx] == 'P')
 		mlx_put_image_to_window(mlx->mlx_ptr, mlx->win_ptr, mlx->img.floor,
 			posx * 32, posy * 32);
@@ -47,14 +47,14 @@ static void	move_to_new_pos(t_mlx *mlx, int new_posx, int new_posy)
 			posx * 32, posy * 32);
 	mlx_put_image_to_window(mlx->mlx_ptr, mlx->win_ptr, mlx->img.player,
 		new_posx * 32, new_posy * 32);
-	mlx->player.posy = new_posy;
-	mlx->player.posx = new_posx;
+	mlx->player.y = new_posy;
+	mlx->player.x = new_posx;
 }
 
 static void	check_next_pos(t_mlx *mlx, int new_posx, int new_posy)
 {
 	if (mlx->map[new_posy][new_posx] == '1')
-		move_to_new_pos(mlx, mlx->player.posx, mlx->player.posy);
+		move_to_new_pos(mlx, mlx->player.x, mlx->player.y);
 	else
 	{
 		mlx->player.moves++;
@@ -85,25 +85,25 @@ void	move_player(int key, t_mlx *mlx)
 	if (key == 13)
 	{
 		mlx->img.player = mlx_xpm_file_to_image(mlx->mlx_ptr,
-				PLAYER_UP_PATH, &mlx->player.width, &mlx->player.height);
-		check_next_pos(mlx, mlx->player.posx, mlx->player.posy - 1);
+				PLAYER_UP_PATH, &mlx->img.w, &mlx->img.h);
+		check_next_pos(mlx, mlx->player.x, mlx->player.y - 1);
 	}
 	else if (key == 1)
 	{
 		mlx->img.player = mlx_xpm_file_to_image(mlx->mlx_ptr,
-				PLAYER_DOWN_PATH, &mlx->player.width, &mlx->player.height);
-		check_next_pos(mlx, mlx->player.posx, mlx->player.posy + 1);
+				PLAYER_DOWN_PATH, &mlx->img.w, &mlx->img.h);
+		check_next_pos(mlx, mlx->player.x, mlx->player.y + 1);
 	}
 	else if (key == 0)
 	{
 		mlx->img.player = mlx_xpm_file_to_image(mlx->mlx_ptr,
-				PLAYER_LEFT_PATH, &mlx->player.width, &mlx->player.height);
-		check_next_pos(mlx, mlx->player.posx - 1, mlx->player.posy);
+				PLAYER_LEFT_PATH, &mlx->img.w, &mlx->img.h);
+		check_next_pos(mlx, mlx->player.x - 1, mlx->player.y);
 	}
 	else if (key == 2)
 	{
 		mlx->img.player = mlx_xpm_file_to_image(mlx->mlx_ptr,
-				PLAYER_RIGHT_PATH, &mlx->player.width, &mlx->player.height);
-		check_next_pos(mlx, mlx->player.posx + 1, mlx->player.posy);
+				PLAYER_RIGHT_PATH, &mlx->img.w, &mlx->img.h);
+		check_next_pos(mlx, mlx->player.x + 1, mlx->player.y);
 	}
 }

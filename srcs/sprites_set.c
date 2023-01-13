@@ -6,7 +6,7 @@
 /*   By: fluchten <fluchten@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/06 11:48:47 by fluchten          #+#    #+#             */
-/*   Updated: 2023/01/13 14:14:33 by fluchten         ###   ########.fr       */
+/*   Updated: 2023/01/13 17:09:17 by fluchten         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,8 +27,8 @@ void	set_floor(t_mlx *mlx, int x, int y)
 void	set_player(t_mlx *mlx, int x, int y)
 {
 	mlx->player.moves = 0;
-	mlx->player.posx = x;
-	mlx->player.posy = y;
+	mlx->player.x = x;
+	mlx->player.y = y;
 	mlx_put_image_to_window(mlx->mlx_ptr, mlx->win_ptr, mlx->img.floor,
 		x * 32, y * 32);
 	mlx_put_image_to_window(mlx->mlx_ptr, mlx->win_ptr, mlx->img.player,

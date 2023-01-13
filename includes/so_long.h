@@ -6,7 +6,7 @@
 /*   By: fluchten <fluchten@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/03 09:46:50 by fluchten          #+#    #+#             */
-/*   Updated: 2023/01/13 16:19:15 by fluchten         ###   ########.fr       */
+/*   Updated: 2023/01/13 17:11:03 by fluchten         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,13 +37,13 @@ typedef struct s_material {
 	void	*exit;
 	void	*exit_open;
 	void	*player;
+	int		w;
+	int		h;
 }			t_material;
 
 typedef struct s_player {
-	int		posx;
-	int		posy;
-	int		width;
-	int		height;
+	int		x;
+	int		y;
 	int		moves;
 	int		items;
 }				t_player;
