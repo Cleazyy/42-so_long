@@ -6,7 +6,7 @@
 /*   By: fluchten <fluchten@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/06 11:48:47 by fluchten          #+#    #+#             */
-/*   Updated: 2023/01/13 17:10:46 by fluchten         ###   ########.fr       */
+/*   Updated: 2023/01/14 09:31:09 by fluchten         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,25 +82,25 @@ static void	check_next_pos(t_mlx *mlx, int new_posx, int new_posy)
 
 void	move_player(int key, t_mlx *mlx)
 {
-	if (key == 13)
+	if (key == UP)
 	{
 		mlx->img.player = mlx_xpm_file_to_image(mlx->mlx_ptr,
 				PLAYER_UP_PATH, &mlx->img.w, &mlx->img.h);
 		check_next_pos(mlx, mlx->player.x, mlx->player.y - 1);
 	}
-	else if (key == 1)
+	else if (key == DOWN)
 	{
 		mlx->img.player = mlx_xpm_file_to_image(mlx->mlx_ptr,
 				PLAYER_DOWN_PATH, &mlx->img.w, &mlx->img.h);
 		check_next_pos(mlx, mlx->player.x, mlx->player.y + 1);
 	}
-	else if (key == 0)
+	else if (key == LEFT)
 	{
 		mlx->img.player = mlx_xpm_file_to_image(mlx->mlx_ptr,
 				PLAYER_LEFT_PATH, &mlx->img.w, &mlx->img.h);
 		check_next_pos(mlx, mlx->player.x - 1, mlx->player.y);
 	}
-	else if (key == 2)
+	else if (key == RIGHT)
 	{
 		mlx->img.player = mlx_xpm_file_to_image(mlx->mlx_ptr,
 				PLAYER_RIGHT_PATH, &mlx->img.w, &mlx->img.h);

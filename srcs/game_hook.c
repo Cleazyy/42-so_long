@@ -6,7 +6,7 @@
 /*   By: fluchten <fluchten@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/06 11:48:47 by fluchten          #+#    #+#             */
-/*   Updated: 2023/01/13 14:14:17 by fluchten         ###   ########.fr       */
+/*   Updated: 2023/01/14 09:31:30 by fluchten         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,9 +22,9 @@ int	closewindow(t_mlx *mlx)
 
 int	key_pressed(int key, t_mlx *mlx)
 {
-	if ((key >= 0 && key <= 2) || key == 13)
+	if (key == UP || key == DOWN || key == LEFT || key == RIGHT)
 		move_player(key, mlx);
-	else if (key == 53)
+	else if (key == CLOSE)
 		closewindow(mlx);
 	return (0);
 }

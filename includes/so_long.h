@@ -6,7 +6,7 @@
 /*   By: fluchten <fluchten@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/03 09:46:50 by fluchten          #+#    #+#             */
-/*   Updated: 2023/01/13 17:11:03 by fluchten         ###   ########.fr       */
+/*   Updated: 2023/01/14 09:36:50 by fluchten         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,12 @@
 # define PLAYER_LEFT_PATH "./assets/player_left.xpm"
 # define PLAYER_RIGHT_PATH "./assets/player_right.xpm"
 
+# define UP 13
+# define DOWN 1
+# define LEFT 0
+# define RIGHT 2 
+# define CLOSE 53
+
 typedef struct s_material {
 	void	*floor;
 	void	*wall;
@@ -37,6 +43,7 @@ typedef struct s_material {
 	void	*exit;
 	void	*exit_open;
 	void	*player;
+	void	*mat[5];
 	int		w;
 	int		h;
 }			t_material;
