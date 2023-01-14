@@ -6,7 +6,7 @@
 /*   By: fluchten <fluchten@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/06 11:48:47 by fluchten          #+#    #+#             */
-/*   Updated: 2023/01/14 10:19:31 by fluchten         ###   ########.fr       */
+/*   Updated: 2023/01/14 11:37:38 by fluchten         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,11 +18,7 @@ int	ft_strlen(char *str)
 
 	j = 0;
 	while (str[j])
-	{
-		if (str[j] == '\n' || str[j] == '\0')
-			return (j);
 		j++;
-	}
 	return (j);
 }
 

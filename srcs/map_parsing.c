@@ -6,7 +6,7 @@
 /*   By: fluchten <fluchten@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/06 11:48:47 by fluchten          #+#    #+#             */
-/*   Updated: 2023/01/13 14:14:25 by fluchten         ###   ########.fr       */
+/*   Updated: 2023/01/14 11:36:03 by fluchten         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,7 +63,7 @@ static char	**set_map_data(char **map, char *file, int nb_lines)
 	while (y < nb_lines)
 	{
 		line = get_next_line(fd);
-		map[y] = (char *)malloc(sizeof(char) * ft_strlen(line));
+		map[y] = (char *)malloc(sizeof(char) * (ft_strlen(line) + 1));
 		if (!map[y])
 			exit_error("ERROR: Malloc failed!\n");
 		map[y] = set_line_data(map[y], line);
