@@ -6,7 +6,7 @@
 /*   By: fluchten <fluchten@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/06 11:48:47 by fluchten          #+#    #+#             */
-/*   Updated: 2023/01/14 11:54:19 by fluchten         ###   ########.fr       */
+/*   Updated: 2023/01/14 11:59:33 by fluchten         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,6 +69,13 @@ int	print_error(char *str)
 
 void	exit_error(char *str)
 {
+	ft_putstr_fd(str, 2);
+	exit(EXIT_FAILURE);
+}
+
+void	exit_free_error(char *str, char **map)
+{
+	free_map(map);
 	ft_putstr_fd(str, 2);
 	exit(EXIT_FAILURE);
 }
