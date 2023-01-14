@@ -6,7 +6,7 @@
 #    By: fluchten <fluchten@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/03 09:46:50 by fluchten          #+#    #+#              #
-#    Updated: 2023/01/14 13:36:29 by fluchten         ###   ########.fr        #
+#    Updated: 2023/01/14 17:47:53 by fluchten         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,7 +15,6 @@ NAME = so_long
 CC = gcc
 CFLAGS = -Wall -Wextra -Werror
 RM = rm -rf
-# FSANITIZE =-fsanitize=address -g
 
 INC_DIR = includes
 SRCS_DIR = srcs
