@@ -6,7 +6,7 @@
 /*   By: fluchten <fluchten@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/06 11:48:47 by fluchten          #+#    #+#             */
-/*   Updated: 2023/01/14 12:12:18 by fluchten         ###   ########.fr       */
+/*   Updated: 2023/01/14 13:41:17 by fluchten         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,5 +87,6 @@ char	**parse_map(char *file)
 	if (!map)
 		exit_error("ERROR: Malloc failed!\n");
 	map = set_map_data(map, file, nb_lines);
+	check_valid_map(map);
 	return (map);
 }

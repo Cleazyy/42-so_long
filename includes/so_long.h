@@ -6,7 +6,7 @@
 /*   By: fluchten <fluchten@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/03 09:46:50 by fluchten          #+#    #+#             */
-/*   Updated: 2023/01/14 13:33:14 by fluchten         ###   ########.fr       */
+/*   Updated: 2023/01/14 13:41:58 by fluchten         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,7 +65,7 @@ void	exit_game(t_mlx *mlx, char *str);
 int		close_window(t_mlx *mlx);
 int		key_pressed(int key, t_mlx *mlx);
 /* map */
-void	check_mapdata(char **map);
+void	check_valid_map(char **map);
 void	init_map(char **map, t_mlx *mlx);
 char	**parse_map(char *file);
 int		get_map_size(char **map);
