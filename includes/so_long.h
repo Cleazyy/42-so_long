@@ -6,7 +6,7 @@
 /*   By: fluchten <fluchten@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/03 09:46:50 by fluchten          #+#    #+#             */
-/*   Updated: 2023/01/14 13:41:58 by fluchten         ###   ########.fr       */
+/*   Updated: 2023/01/14 17:41:52 by fluchten         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,15 +22,15 @@
 
 # define WALL_PATH "./assets/wall.xpm"
 # define FLOOR_PATH "./assets/floor.xpm"
-# define ITEM_PATH "./assets/key.xpm"
-# define EXIT_PATH "./assets/trapdoor_closed.xpm"
-# define EXIT_OPEN_PATH "./assets/trapdoor_opened.xpm"
+# define COLLECTIBLE_PATH "./assets/key.xpm"
+# define EXIT_CLOSED_PATH "./assets/trapdoor_closed.xpm"
+# define EXIT_OPENED_PATH "./assets/trapdoor_opened.xpm"
 # define PLAYER_UP_PATH "./assets/player_up.xpm"
 # define PLAYER_DOWN_PATH "./assets/player_down.xpm"
 # define PLAYER_LEFT_PATH "./assets/player_left.xpm"
 # define PLAYER_RIGHT_PATH "./assets/player_right.xpm"
 # define SPRITES_SIZE 32
-# define NB_SPRITES 6
+# define NB_SPRITES 5
 # define UP 13
 # define DOWN 1
 # define LEFT 0

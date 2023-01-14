@@ -6,7 +6,7 @@
 /*   By: fluchten <fluchten@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/06 11:48:47 by fluchten          #+#    #+#             */
-/*   Updated: 2023/01/14 12:23:04 by fluchten         ###   ########.fr       */
+/*   Updated: 2023/01/14 17:39:01 by fluchten         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,6 +46,6 @@ void	set_player_sprite(t_mlx *mlx, int x, int y)
 	mlx->player.y = y;
 	mlx_put_image_to_window(mlx->mlx_ptr, mlx->win_ptr, mlx->img.mat[0],
 		x * SPRITES_SIZE, y * SPRITES_SIZE);
-	mlx_put_image_to_window(mlx->mlx_ptr, mlx->win_ptr, mlx->img.mat[5],
+	mlx_put_image_to_window(mlx->mlx_ptr, mlx->win_ptr, mlx->img.mat[4],
 		x * SPRITES_SIZE, y * SPRITES_SIZE);
 }
