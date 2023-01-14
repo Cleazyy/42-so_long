@@ -6,7 +6,7 @@
 /*   By: fluchten <fluchten@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/06 11:48:47 by fluchten          #+#    #+#             */
-/*   Updated: 2023/01/14 11:37:38 by fluchten         ###   ########.fr       */
+/*   Updated: 2023/01/14 11:54:19 by fluchten         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,13 +24,13 @@ int	ft_strlen(char *str)
 
 void	free_map(char **map)
 {
-	int	i;
+	int	y;
 
-	i = 0;
-	while (map[i])
+	y = 0;
+	while (map[y])
 	{
-		free(map[i]);
-		i++;
+		free(map[y]);
+		y++;
 	}
 	free(map);
 }
