@@ -6,7 +6,7 @@
 /*   By: fluchten <fluchten@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/14 13:36:57 by fluchten          #+#    #+#             */
-/*   Updated: 2023/01/14 15:57:37 by fluchten         ###   ########.fr       */
+/*   Updated: 2023/01/14 16:12:31 by fluchten         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ static int	rectangular_map(char **map)
 static int	closed_map(char **map)
 {
 	int	x;
-	int y;
+	int	y;
 
 	x = 0;
 	while (map[0][x])
@@ -69,6 +69,28 @@ static int	valid_items(char **map)
 	return (1);
 }
 
+static int	count_items(char **map, char item)
+{
+	int	x;
+	int	y;
+	int	count;
+
+	y = 0;
+	count = 0;
+	while (map[y])
+	{
+		x = 0;
+		while (map[y][x])
+		{
+			if (map[y][x] == item)
+				count++;
+			x++;
+		}
+		y++;
+	}
+	return (count);
+}
+
 void	check_valid_map(char **map)
 {
 	if (!rectangular_map(map))
@@ -77,4 +99,10 @@ void	check_valid_map(char **map)
 		exit_free_error("ERROR: Map is not closed by walls!\n", map);
 	else if (!valid_items(map))
 		exit_free_error("ERROR: Map contains invalid items!\n", map);
+	else if (count_items(map, 'C') < 1)
+		exit_free_error("ERROR: Map does not have at least one item!\n", map);
+	else if (count_items(map, 'E') < 1)
+		exit_free_error("ERROR: Map does not have at least one exit!\n", map);
+	else if (count_items(map, 'P') != 1)
+		exit_free_error("ERROR: Map does not exactly have a spawn!\n", map);
 }
