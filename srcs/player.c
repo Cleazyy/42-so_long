@@ -6,7 +6,7 @@
 /*   By: fluchten <fluchten@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/06 11:48:47 by fluchten          #+#    #+#             */
-/*   Updated: 2023/01/14 10:18:41 by fluchten         ###   ########.fr       */
+/*   Updated: 2023/01/14 12:07:15 by fluchten         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,7 +69,7 @@ static void	check_next_pos(t_mlx *mlx, int new_posx, int new_posy)
 		}
 		else if (mlx->map[new_posy][new_posx] == 'E')
 		{
-			if (mlx->player.items == 0)	
+			if (mlx->player.items == 0)
 				exit_game(mlx, "You have won!");
 			else
 				ft_printf("There are still %d items!\n", mlx->player.items);
