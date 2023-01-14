@@ -6,7 +6,7 @@
 /*   By: fluchten <fluchten@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/14 13:36:57 by fluchten          #+#    #+#             */
-/*   Updated: 2023/01/14 15:36:54 by fluchten         ###   ########.fr       */
+/*   Updated: 2023/01/14 15:57:37 by fluchten         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,8 +73,8 @@ void	check_valid_map(char **map)
 {
 	if (!rectangular_map(map))
 		exit_free_error("ERROR: Map is not rectangular!\n", map);
-	if (!closed_map(map))
+	else if (!closed_map(map))
 		exit_free_error("ERROR: Map is not closed by walls!\n", map);
-	if (!valid_items(map))
+	else if (!valid_items(map))
 		exit_free_error("ERROR: Map contains invalid items!\n", map);
 }
