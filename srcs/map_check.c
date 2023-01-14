@@ -6,7 +6,7 @@
 /*   By: fluchten <fluchten@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/14 13:36:57 by fluchten          #+#    #+#             */
-/*   Updated: 2023/01/14 15:03:29 by fluchten         ###   ########.fr       */
+/*   Updated: 2023/01/14 15:30:43 by fluchten         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,7 @@ static int	closed_map(char **map)
 	return (1);
 }
 
-/* static int	valid_items(char **map)
+static int	valid_items(char **map)
 {
 	int	x;
 	int	y;
@@ -59,15 +59,15 @@ static int	closed_map(char **map)
 		x = 0;
 		while (map[y][x])
 		{
-			if (map[y][x] != '0' || map[y][x] != '1' || map[y][x] != 'C'
-				|| map[y][x] != 'E' || map[y][x] != 'P')
+			if (map[y][x] != '0' && map[y][x] != '1' && map[y][x] != 'C'
+				&& map[y][x] != 'E' && map[y][x] != 'P')
 				return (0);
 			x++;
 		}
 		y++;
 	}
 	return (1);
-} */
+}
 
 void	check_valid_map(char **map)
 {
@@ -75,6 +75,6 @@ void	check_valid_map(char **map)
 		exit_free_error("ERROR: Map is not rectangular!\n", map);
 	if (!closed_map(map))
 		exit_free_error("ERROR: Map is not closed by walls!\n", map);
-	// if (!valid_items(map))
-	// 	exit_free_error("ERROR: Map contains invalid items!\n", map);
+	if (!valid_items(map))
+		exit_free_error("ERROR: Map contains invalid items!\n", map);
 }
