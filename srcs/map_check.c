@@ -6,7 +6,7 @@
 /*   By: fluchten <fluchten@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/14 13:36:57 by fluchten          #+#    #+#             */
-/*   Updated: 2023/01/14 13:46:12 by fluchten         ###   ########.fr       */
+/*   Updated: 2023/01/14 14:11:14 by fluchten         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 static int	rectangular_map(char **map)
 {
-	int y;
+	int	y;
 
 	y = 0;
 	while (y < get_map_size(map))
