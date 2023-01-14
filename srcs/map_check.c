@@ -6,7 +6,7 @@
 /*   By: fluchten <fluchten@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/14 13:36:57 by fluchten          #+#    #+#             */
-/*   Updated: 2023/01/14 15:30:43 by fluchten         ###   ########.fr       */
+/*   Updated: 2023/01/14 15:36:54 by fluchten         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,14 +32,14 @@ static int	closed_map(char **map)
 	int y;
 
 	x = 0;
-	while (x < ft_strlen(map[0]))
+	while (map[0][x])
 	{
 		if (map[0][x] != '1' || map[get_map_size(map) - 1][x] != '1')
 			return (0);
 		x++;
 	}
 	y = 0;
-	while (y < get_map_size(map))
+	while (map[y])
 	{
 		if (map[y][0] != '1' || map[y][ft_strlen(map[0]) - 1] != '1')
 			return (0);
