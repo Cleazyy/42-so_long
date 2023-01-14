@@ -6,7 +6,7 @@
 /*   By: fluchten <fluchten@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/06 11:48:47 by fluchten          #+#    #+#             */
-/*   Updated: 2023/01/14 12:07:15 by fluchten         ###   ########.fr       */
+/*   Updated: 2023/01/14 12:25:44 by fluchten         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ static void	open_exit(t_mlx *mlx)
 		{
 			if (mlx->map[y][x] == 'E')
 				mlx_put_image_to_window(mlx->mlx_ptr, mlx->win_ptr,
-					mlx->img.mat[4], x * 32, y * 32);
+					mlx->img.mat[4], x * SPRITES_SIZE, y * SPRITES_SIZE);
 			x++;
 		}
 		y++;
@@ -41,12 +41,12 @@ static void	move_to_new_pos(t_mlx *mlx, int new_posx, int new_posy)
 	posy = mlx->player.y;
 	if (mlx->map[posy][posx] == '0' || mlx->map[posy][posx] == 'P')
 		mlx_put_image_to_window(mlx->mlx_ptr, mlx->win_ptr, mlx->img.mat[0],
-			posx * 32, posy * 32);
+			posx * SPRITES_SIZE, posy * SPRITES_SIZE);
 	else if (mlx->map[posy][posx] == 'E')
 		mlx_put_image_to_window(mlx->mlx_ptr, mlx->win_ptr, mlx->img.mat[3],
-			posx * 32, posy * 32);
+			posx * SPRITES_SIZE, posy * SPRITES_SIZE);
 	mlx_put_image_to_window(mlx->mlx_ptr, mlx->win_ptr, mlx->img.mat[5],
-		new_posx * 32, new_posy * 32);
+		new_posx * SPRITES_SIZE, new_posy * SPRITES_SIZE);
 	mlx->player.y = new_posy;
 	mlx->player.x = new_posx;
 }
