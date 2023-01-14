@@ -6,7 +6,7 @@
 /*   By: fluchten <fluchten@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/06 11:48:47 by fluchten          #+#    #+#             */
-/*   Updated: 2023/01/13 14:14:19 by fluchten         ###   ########.fr       */
+/*   Updated: 2023/01/14 10:23:25 by fluchten         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ int	main(int ac, char **av)
 			get_map_height(mlx.map), "so_long");
 	init_map(mlx.map, &mlx);
 	mlx_key_hook(mlx.win_ptr, key_pressed, &mlx);
-	mlx_hook(mlx.win_ptr, 17, 0, closewindow, &mlx);
+	mlx_hook(mlx.win_ptr, 17, 0, close_window, &mlx);
 	mlx_loop(mlx.mlx_ptr);
 	return (0);
 }

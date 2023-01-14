@@ -6,7 +6,7 @@
 /*   By: fluchten <fluchten@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/03 09:46:50 by fluchten          #+#    #+#             */
-/*   Updated: 2023/01/14 10:17:16 by fluchten         ###   ########.fr       */
+/*   Updated: 2023/01/14 10:23:25 by fluchten         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,7 +60,7 @@ typedef struct s_mlx {
 /* args */
 int		check_args(int ac, char **av);
 /* game */
-int		closewindow(t_mlx *mlx);
+int		close_window(t_mlx *mlx);
 int		key_pressed(int key, t_mlx *mlx);
 /* map */
 void	check_mapdata(char **map);
