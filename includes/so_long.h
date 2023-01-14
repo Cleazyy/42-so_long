@@ -6,7 +6,7 @@
 /*   By: fluchten <fluchten@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/03 09:46:50 by fluchten          #+#    #+#             */
-/*   Updated: 2023/01/14 09:36:50 by fluchten         ###   ########.fr       */
+/*   Updated: 2023/01/14 10:17:16 by fluchten         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,24 +29,18 @@
 # define PLAYER_DOWN_PATH "./assets/player_down.xpm"
 # define PLAYER_LEFT_PATH "./assets/player_left.xpm"
 # define PLAYER_RIGHT_PATH "./assets/player_right.xpm"
-
+# define NB_SPRITES 6
 # define UP 13
 # define DOWN 1
 # define LEFT 0
 # define RIGHT 2 
 # define CLOSE 53
 
-typedef struct s_material {
-	void	*floor;
-	void	*wall;
-	void	*collectible;
-	void	*exit;
-	void	*exit_open;
-	void	*player;
-	void	*mat[5];
+typedef struct s_img {
+	void	*mat[NB_SPRITES];
 	int		w;
 	int		h;
-}			t_material;
+}			t_img;
 
 typedef struct s_player {
 	int		x;
@@ -59,7 +53,7 @@ typedef struct s_mlx {
 	void		*mlx_ptr;
 	void		*win_ptr;
 	char		**map;
-	t_material	img;
+	t_img		img;
 	t_player	player;
 }				t_mlx;
 
@@ -87,6 +81,7 @@ void	set_exit(t_mlx *mlx, int x, int y);
 /* utils */
 int		ft_strlen(char *str);
 void	free_map(char **map);
+void	exit_game(t_mlx *mlx, char *str);
 int		print_error(char *str);
 void	exit_error(char *str);
 

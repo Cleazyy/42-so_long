@@ -6,7 +6,7 @@
 /*   By: fluchten <fluchten@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/06 11:48:47 by fluchten          #+#    #+#             */
-/*   Updated: 2023/01/14 09:31:30 by fluchten         ###   ########.fr       */
+/*   Updated: 2023/01/14 10:16:54 by fluchten         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,7 @@
 
 int	closewindow(t_mlx *mlx)
 {
-	ft_printf("Game closed. Number of moves : %d\n", mlx->player.moves);
-	mlx_destroy_window(mlx->mlx_ptr, mlx->win_ptr);
-	free_map(mlx->map);
+	exit_game(mlx, "Game closed.");
 	exit(EXIT_SUCCESS);
 }
 
