@@ -6,7 +6,7 @@
 #    By: fluchten <fluchten@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/03 09:46:50 by fluchten          #+#    #+#              #
-#    Updated: 2023/01/14 12:12:51 by fluchten         ###   ########.fr        #
+#    Updated: 2023/01/14 12:16:43 by fluchten         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,7 +26,7 @@ SRCS = args.c \
 		main.c \
 		map_init.c \
 		map_parsing.c \
-		map_size.c \
+		map_utils.c \
 		player.c \
 		sprites_init.c \
 		sprites_set.c \
