@@ -6,7 +6,7 @@
 /*   By: fluchten <fluchten@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/06 11:48:47 by fluchten          #+#    #+#             */
-/*   Updated: 2023/01/13 14:20:18 by fluchten         ###   ########.fr       */
+/*   Updated: 2023/01/14 10:26:45 by fluchten         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,16 @@
 
 static void	set_material(char **map, t_mlx *mlx, int x, int y)
 {
-	if (map[y][x] == '1')
-		set_wall(mlx, x, y);
-	else if (map[y][x] == '0')
-		set_floor(mlx, x, y);
-	else if (map[y][x] == 'P')
-		set_player(mlx, x, y);
+	if (map[y][x] == '0')
+		set_floor_sprite(mlx, x, y);
+	else if (map[y][x] == '1')
+		set_wall_sprite(mlx, x, y);
 	else if (map[y][x] == 'C')
-		set_collectible(mlx, x, y);
+		set_collectible_sprite(mlx, x, y);
 	else if (map[y][x] == 'E')
-		set_exit(mlx, x, y);
+		set_exit_sprite(mlx, x, y);
+	else if (map[y][x] == 'P')
+		set_player_sprite(mlx, x, y);
 }
 
 void	init_map(char **map, t_mlx *mlx)

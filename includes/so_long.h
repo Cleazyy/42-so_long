@@ -6,7 +6,7 @@
 /*   By: fluchten <fluchten@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/03 09:46:50 by fluchten          #+#    #+#             */
-/*   Updated: 2023/01/14 10:23:25 by fluchten         ###   ########.fr       */
+/*   Updated: 2023/01/14 10:26:45 by fluchten         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,11 +73,11 @@ int		get_map_width(char **map);
 void	move_player(int keycode, t_mlx *mlx);
 /* sprites */
 void	init_sprites(t_mlx *mlx);
-void	set_wall(t_mlx *mlx, int x, int y);
-void	set_floor(t_mlx *mlx, int x, int y);
-void	set_player(t_mlx *mlx, int x, int y);
-void	set_collectible(t_mlx *mlx, int x, int y);
-void	set_exit(t_mlx *mlx, int x, int y);
+void	set_wall_sprite(t_mlx *mlx, int x, int y);
+void	set_floor_sprite(t_mlx *mlx, int x, int y);
+void	set_player_sprite(t_mlx *mlx, int x, int y);
+void	set_collectible_sprite(t_mlx *mlx, int x, int y);
+void	set_exit_sprite(t_mlx *mlx, int x, int y);
 /* utils */
 int		ft_strlen(char *str);
 void	free_map(char **map);
