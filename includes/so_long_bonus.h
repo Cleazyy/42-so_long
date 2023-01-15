@@ -6,7 +6,7 @@
 /*   By: fluchten <fluchten@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/03 09:46:50 by fluchten          #+#    #+#             */
-/*   Updated: 2023/01/15 11:42:29 by fluchten         ###   ########.fr       */
+/*   Updated: 2023/01/15 12:02:14 by fluchten         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,8 +29,9 @@
 # define PLAYER_DOWN_PATH "./assets/player_down.xpm"
 # define PLAYER_LEFT_PATH "./assets/player_left.xpm"
 # define PLAYER_RIGHT_PATH "./assets/player_right.xpm"
+# define ENEMY_PATH "./assets/enemy.xpm"
 # define SPRITES_SIZE 32
-# define NB_SPRITES 5
+# define NB_SPRITES 6
 # define UP 13
 # define DOWN 1
 # define LEFT 0
@@ -76,12 +77,13 @@ void	free_map(char **map);
 void	move_player(int keycode, t_mlx *mlx);
 /* sprites */
 void	init_sprites(t_mlx *mlx);
-void	set_wall_sprite(t_mlx *mlx, int x, int y);
 void	set_floor_sprite(t_mlx *mlx, int x, int y);
-void	set_player_sprite(t_mlx *mlx, int x, int y);
+void	set_wall_sprite(t_mlx *mlx, int x, int y);
 void	set_collectible_sprite(t_mlx *mlx, int x, int y);
 void	set_exit_closed_sprite(t_mlx *mlx, int x, int y);
 void	set_exit_opened_sprite(t_mlx *mlx);
+void	set_player_sprite(t_mlx *mlx, int x, int y);
+void	set_enemy_sprite(t_mlx *mlx, int x, int y);
 /* utils */
 int		ft_strlen(char *str);
 int		print_error(char *str);

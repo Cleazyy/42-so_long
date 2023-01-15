@@ -6,7 +6,7 @@
 /*   By: fluchten <fluchten@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/15 11:13:11 by fluchten          #+#    #+#             */
-/*   Updated: 2023/01/15 11:17:30 by fluchten         ###   ########.fr       */
+/*   Updated: 2023/01/15 12:02:23 by fluchten         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,4 +32,10 @@ void	set_exit_opened_sprite(t_mlx *mlx)
 		}
 		y++;
 	}
+}
+
+void	set_enemy_sprite(t_mlx *mlx, int x, int y)
+{
+	mlx_put_image_to_window(mlx->mlx_ptr, mlx->win_ptr, mlx->img.mat[5],
+		x * SPRITES_SIZE, y * SPRITES_SIZE);
 }

@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   sprites_init.c                                     :+:      :+:    :+:   */
+/*   sprites_init_bonus.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fluchten <fluchten@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/06 11:48:47 by fluchten          #+#    #+#             */
-/*   Updated: 2023/01/15 11:03:13 by fluchten         ###   ########.fr       */
+/*   Updated: 2023/01/15 12:00:32 by fluchten         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,5 +23,7 @@ void	init_sprites(t_mlx *mlx)
 	mlx->img.mat[3] = mlx_xpm_file_to_image(mlx->mlx_ptr, EXIT_CLOSED_PATH,
 			&mlx->img.w, &mlx->img.h);
 	mlx->img.mat[4] = mlx_xpm_file_to_image(mlx->mlx_ptr, PLAYER_DOWN_PATH,
+			&mlx->img.w, &mlx->img.h);
+	mlx->img.mat[5] = mlx_xpm_file_to_image(mlx->mlx_ptr, ENEMY_PATH,
 			&mlx->img.w, &mlx->img.h);
 }
