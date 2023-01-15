@@ -6,7 +6,7 @@
 /*   By: fluchten <fluchten@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/06 11:48:47 by fluchten          #+#    #+#             */
-/*   Updated: 2023/01/15 11:15:55 by fluchten         ###   ########.fr       */
+/*   Updated: 2023/01/15 12:21:00 by fluchten         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,6 +54,8 @@ static void	check_next_pos(t_mlx *mlx, int new_posx, int new_posy)
 			else
 				ft_printf("There are still %d items!\n", mlx->player.items);
 		}
+		else if (mlx->map[new_posy][new_posx] == 'M')
+			exit_game(mlx, "GAME OVER! You are dead!");
 	}
 }
 
