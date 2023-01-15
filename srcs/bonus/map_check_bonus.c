@@ -6,7 +6,7 @@
 /*   By: fluchten <fluchten@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/14 13:36:57 by fluchten          #+#    #+#             */
-/*   Updated: 2023/01/15 12:05:32 by fluchten         ###   ########.fr       */
+/*   Updated: 2023/01/15 12:32:34 by fluchten         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -105,4 +105,6 @@ void	check_valid_map(char **map)
 		exit_free_error("ERROR: Map does not have at least one exit!\n", map);
 	else if (count_items(map, 'P') != 1)
 		exit_free_error("ERROR: Map does not exactly have a spawn!\n", map);
+	else if (count_items(map, 'M') < 1)
+		exit_free_error("ERROR: Map does not have at least one enemy!\n", map);
 }
