@@ -1,17 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   so_long.h                                          :+:      :+:    :+:   */
+/*   so_long_bonus.h                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fluchten <fluchten@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/03 09:46:50 by fluchten          #+#    #+#             */
-/*   Updated: 2023/01/15 11:01:31 by fluchten         ###   ########.fr       */
+/*   Updated: 2023/01/15 11:02:24 by fluchten         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef SO_LONG_H
-# define SO_LONG_H
+#ifndef SO_LONG_BONUS_H
+# define SO_LONG_BONUS_H
 
 # include <unistd.h>
 # include <stdlib.h>
@@ -24,7 +24,11 @@
 # define FLOOR_PATH "./assets/floor.xpm"
 # define COLLECTIBLE_PATH "./assets/key.xpm"
 # define EXIT_CLOSED_PATH "./assets/trapdoor_closed.xpm"
+# define EXIT_OPENED_PATH "./assets/trapdoor_opened.xpm"
+# define PLAYER_UP_PATH "./assets/player_up.xpm"
 # define PLAYER_DOWN_PATH "./assets/player_down.xpm"
+# define PLAYER_LEFT_PATH "./assets/player_left.xpm"
+# define PLAYER_RIGHT_PATH "./assets/player_right.xpm"
 # define SPRITES_SIZE 32
 # define NB_SPRITES 5
 # define UP 13
