@@ -6,7 +6,7 @@
 /*   By: fluchten <fluchten@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/06 11:48:47 by fluchten          #+#    #+#             */
-/*   Updated: 2023/01/15 11:42:29 by fluchten         ###   ########.fr       */
+/*   Updated: 2023/01/15 12:11:54 by fluchten         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,8 @@ static void	set_material(char **map, t_mlx *mlx, int x, int y)
 		set_exit_closed_sprite(mlx, x, y);
 	else if (map[y][x] == 'P')
 		set_player_sprite(mlx, x, y);
+	else if (map[y][x] == 'M')
+		set_enemy_sprite(mlx, x, y);
 }
 
 void	init_map(char **map, t_mlx *mlx)
