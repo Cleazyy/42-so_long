@@ -6,7 +6,7 @@
 #    By: fluchten <fluchten@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/03 09:46:50 by fluchten          #+#    #+#              #
-#    Updated: 2023/01/15 11:17:08 by fluchten         ###   ########.fr        #
+#    Updated: 2023/01/15 12:41:03 by fluchten         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,9 +17,8 @@ CFLAGS = -Wall -Wextra -Werror
 RM = rm -f
 
 INC_DIR = -I includes
-SRCS_DIR = srcs/mandatory
-SRCS_DIR_BONUS = srcs/bonus
 
+SRCS_DIR = srcs/mandatory
 SRCS = args.c \
 		game_hook.c \
 		main.c \
@@ -32,6 +31,7 @@ SRCS = args.c \
 		sprites_set.c \
 		utils.c
 
+SRCS_DIR_BONUS = srcs/bonus
 SRCS_BONUS = args_bonus.c \
 			game_hook_bonus.c \
 			main_bonus.c \
