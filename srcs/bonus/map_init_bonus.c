@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   map_init.c                                         :+:      :+:    :+:   */
+/*   map_init_bonus.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fluchten <fluchten@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/06 11:48:47 by fluchten          #+#    #+#             */
-/*   Updated: 2023/01/15 11:03:05 by fluchten         ###   ########.fr       */
+/*   Updated: 2023/01/15 11:42:29 by fluchten         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ static void	set_material(char **map, t_mlx *mlx, int x, int y)
 	else if (map[y][x] == 'C')
 		set_collectible_sprite(mlx, x, y);
 	else if (map[y][x] == 'E')
-		set_exit_sprite(mlx, x, y);
+		set_exit_closed_sprite(mlx, x, y);
 	else if (map[y][x] == 'P')
 		set_player_sprite(mlx, x, y);
 }

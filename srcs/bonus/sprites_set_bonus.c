@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   sprites_set.c                                      :+:      :+:    :+:   */
+/*   sprites_set_bonus.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fluchten <fluchten@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/06 11:48:47 by fluchten          #+#    #+#             */
-/*   Updated: 2023/01/15 11:03:16 by fluchten         ###   ########.fr       */
+/*   Updated: 2023/01/15 11:42:29 by fluchten         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ void	set_collectible_sprite(t_mlx *mlx, int x, int y)
 		x * SPRITES_SIZE, y * SPRITES_SIZE);
 }
 
-void	set_exit_sprite(t_mlx *mlx, int x, int y)
+void	set_exit_closed_sprite(t_mlx *mlx, int x, int y)
 {
 	mlx_put_image_to_window(mlx->mlx_ptr, mlx->win_ptr, mlx->img.mat[3],
 		x * SPRITES_SIZE, y * SPRITES_SIZE);

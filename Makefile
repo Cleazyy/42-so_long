@@ -6,7 +6,7 @@
 #    By: fluchten <fluchten@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/03 09:46:50 by fluchten          #+#    #+#              #
-#    Updated: 2023/01/15 11:06:16 by fluchten         ###   ########.fr        #
+#    Updated: 2023/01/15 11:17:08 by fluchten         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -42,6 +42,7 @@ SRCS_BONUS = args_bonus.c \
 			player_bonus.c \
 			sprites_init_bonus.c \
 			sprites_set_bonus.c \
+			sprites_set2_bonus.c \
 			utils_bonus.c
 
 OBJS = $(addprefix ${SRCS_DIR}/, ${SRCS:%.c=%.o})

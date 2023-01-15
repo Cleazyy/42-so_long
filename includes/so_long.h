@@ -6,7 +6,7 @@
 /*   By: fluchten <fluchten@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/03 09:46:50 by fluchten          #+#    #+#             */
-/*   Updated: 2023/01/15 11:01:31 by fluchten         ###   ########.fr       */
+/*   Updated: 2023/01/15 11:42:29 by fluchten         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,7 +76,7 @@ void	set_wall_sprite(t_mlx *mlx, int x, int y);
 void	set_floor_sprite(t_mlx *mlx, int x, int y);
 void	set_player_sprite(t_mlx *mlx, int x, int y);
 void	set_collectible_sprite(t_mlx *mlx, int x, int y);
-void	set_exit_sprite(t_mlx *mlx, int x, int y);
+void	set_exit_closed_sprite(t_mlx *mlx, int x, int y);
 /* utils */
 int		ft_strlen(char *str);
 int		print_error(char *str);

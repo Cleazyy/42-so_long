@@ -6,33 +6,11 @@
 /*   By: fluchten <fluchten@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/06 11:48:47 by fluchten          #+#    #+#             */
-/*   Updated: 2023/01/15 11:05:32 by fluchten         ###   ########.fr       */
+/*   Updated: 2023/01/15 11:15:55 by fluchten         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "so_long_bonus.h"
-
-static void	open_exit(t_mlx *mlx)
-{
-	int	x;
-	int	y;
-
-	mlx->img.mat[3] = mlx_xpm_file_to_image(mlx->mlx_ptr,
-			EXIT_OPENED_PATH, &mlx->img.w, &mlx->img.h);
-	y = 0;
-	while (mlx->map[y])
-	{
-		x = 0;
-		while (mlx->map[y][x])
-		{
-			if (mlx->map[y][x] == 'E')
-				mlx_put_image_to_window(mlx->mlx_ptr, mlx->win_ptr,
-					mlx->img.mat[3], x * SPRITES_SIZE, y * SPRITES_SIZE);
-			x++;
-		}
-		y++;
-	}
-}
 
 static void	move_to_new_pos(t_mlx *mlx, int new_posx, int new_posy)
 {
@@ -66,7 +44,7 @@ static void	check_next_pos(t_mlx *mlx, int new_posx, int new_posy)
 		{
 			mlx->player.items--;
 			if (mlx->player.items == 0)
-				open_exit(mlx);
+				set_exit_opened_sprite(mlx);
 			mlx->map[new_posy][new_posx] = '0';
 		}
 		else if (mlx->map[new_posy][new_posx] == 'E')
