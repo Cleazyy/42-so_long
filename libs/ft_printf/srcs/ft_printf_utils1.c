@@ -6,20 +6,18 @@
 /*   By: fluchten <fluchten@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/27 09:02:43 by fluchten          #+#    #+#             */
-/*   Updated: 2023/01/09 10:45:49 by fluchten         ###   ########.fr       */
+/*   Updated: 2023/01/25 19:10:23 by fluchten         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-/* Print a character and return 1 */
 int	ft_putchar(char c)
 {
 	write(1, &c, 1);
 	return (1);
 }
 
-/* Print a string and return its length */
 int	ft_putstr(char *str)
 {
 	int	len;
@@ -33,7 +31,6 @@ int	ft_putstr(char *str)
 	return (len);
 }
 
-/* Print an int and return its length */
 int	ft_putnbr(int nb)
 {
 	long	n;
@@ -56,7 +53,6 @@ int	ft_putnbr(int nb)
 	return (len);
 }
 
-/* Print an unsigned int and return its length */
 int	ft_putunbr(unsigned int nb)
 {
 	int	len;

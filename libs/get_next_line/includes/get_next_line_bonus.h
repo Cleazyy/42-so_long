@@ -1,33 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf_utils2.c                                 :+:      :+:    :+:   */
+/*   get_next_line_bonus.h                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fluchten <fluchten@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/09 09:14:34 by fluchten          #+#    #+#             */
-/*   Updated: 2023/01/25 19:10:29 by fluchten         ###   ########.fr       */
+/*   Created: 2022/11/04 07:41:39 by fluchten          #+#    #+#             */
+/*   Updated: 2023/01/25 19:15:58 by fluchten         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#ifndef GET_NEXT_LINE_BONUS_H
+# define GET_NEXT_LINE_BONUS_H
 
-int	ft_putnbr_base(unsigned long nb, char *base)
-{
-	int	res;
+# ifndef BUFFER_SIZE
+#  define BUFFER_SIZE 42
+# endif
 
-	res = 0;
-	if (nb >= 16)
-		res += ft_putnbr_base(nb / 16, base);
-	res += ft_putchar(base[nb % 16]);
-	return (res);
-}
+# include <unistd.h>
+# include <stdlib.h>
+# include <limits.h>
 
-int	ft_putptr(unsigned long nb)
-{
-	int	res;
+char	*get_next_line(int fd);
+int		ft_is_newline(char *stash);
+char	*ft_strjoin_gnl(char *stash, char *buffer);
+char	*ft_free_stash(char **stash);
 
-	write(1, "0x", 2);
-	res = ft_putnbr_base(nb, HEXA_LOWER);
-	return (res + 2);
-}
+#endif
