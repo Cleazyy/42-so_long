@@ -6,7 +6,7 @@
 #    By: fluchten <fluchten@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/03 09:46:50 by fluchten          #+#    #+#              #
-#    Updated: 2023/01/25 19:34:07 by fluchten         ###   ########.fr        #
+#    Updated: 2023/01/25 19:40:02 by fluchten         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,30 +20,30 @@ INC_DIR = -I includes
 SRCS_DIR = srcs
 OBJS_DIR = objs
 
-SRCS = mandatory/args.c \
-		mandatory/game_hook.c \
-		mandatory/main.c \
-		mandatory/map_check.c \
-		mandatory/map_init.c \
-		mandatory/map_parsing.c \
-		mandatory/map_utils.c \
-		mandatory/player.c \
-		mandatory/sprites_init.c \
-		mandatory/sprites_set.c \
-		mandatory/utils.c
+SRCS = mandatory/args/args.c \
+		mandatory/game/game_hook.c \
+		mandatory/map/map_check.c \
+		mandatory/map/map_init.c \
+		mandatory/map/map_parsing.c \
+		mandatory/map/map_utils.c \
+		mandatory/player/player.c \
+		mandatory/sprites/sprites_init.c \
+		mandatory/sprites/sprites_set.c \
+		mandatory/utils/utils.c \
+		mandatory/main.c
 
-SRCS_BONUS = bonus/args_bonus.c \
-			bonus/game_hook_bonus.c \
-			bonus/main_bonus.c \
-			bonus/map_check_bonus.c \
-			bonus/map_init_bonus.c \
-			bonus/map_parsing_bonus.c \
-			bonus/map_utils_bonus.c \
-			bonus/player_bonus.c \
-			bonus/sprites_init_bonus.c \
-			bonus/sprites_set_bonus.c \
-			bonus/sprites_set2_bonus.c \
-			bonus/utils_bonus.c
+SRCS_BONUS = bonus/args/args_bonus.c \
+			bonus/game/game_hook_bonus.c \
+			bonus/map/map_check_bonus.c \
+			bonus/map/map_init_bonus.c \
+			bonus/map/map_parsing_bonus.c \
+			bonus/map/map_utils_bonus.c \
+			bonus/player/player_bonus.c \
+			bonus/sprites/sprites_init_bonus.c \
+			bonus/sprites/sprites_set_bonus.c \
+			bonus/sprites/sprites_set2_bonus.c \
+			bonus/utils/utils_bonus.c \
+			bonus/main_bonus.c
 
 OBJS = $(addprefix ${OBJS_DIR}/, ${SRCS:%.c=%.o})
 OBJS_BONUS = $(addprefix ${OBJS_DIR}/, ${SRCS_BONUS:%.c=%.o})
